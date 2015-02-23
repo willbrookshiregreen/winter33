@@ -10,8 +10,9 @@
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js"></script>
-    <script src="js/batcap107.js"></script>
+    <script src="js/batterycapacity.js"></script>
     <script src="js/leftsignal.js"></script>
+    <script src="js/front_leftsignal.js"></script>
 
     <!---
     <script src="charge107.js"></script>
@@ -21,7 +22,7 @@
     -->
     <style>
     body {
-        background-color: lightgreen;
+        background-color:lightyellow;
     }
     </style>
 
@@ -51,9 +52,10 @@
             //console.log("togglesensors");
             $("#allsensors").toggleClass('hidden');
         });
-        var socket = io.connect('http://192.168.1.107:3001');
-        batcap(socket);
+        var socket = io.connect('http://192.168.1.109:3001');
+        batterycapacity(socket);
         leftsignal(socket);
+        front_leftsignal(socket);
         socket.on('sensordata', function(data) {
 
             //console.log(data);
@@ -341,11 +343,11 @@
         </div>
         <div class="row">
             <div class="col-md-3" id="leftsignal" style="height:300px">.....</div>
-            <div class="col-md-3" id="leftdata" style="height:300px">.....</div>
+            <div class="col-md-3" id="front_leftsignal" style="height:300px">.....</div>
             <div class="col-md-3" id="frontrightdata" style="height:300px">.....</div>
             <div class="col-md-3" id="rightdata" style="height:300px">.....</div>
         </div>
-        <div class="col-md-3" id="batcap" style="height:300px">bat</div>
+        <div class="col-md-3" id="batterycapacity" style="height:300px">bat</div>
 
         <div class="row">
             <div class="col-xs-6">

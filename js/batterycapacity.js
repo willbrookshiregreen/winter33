@@ -1,7 +1,6 @@
-function batcap(socket) {
+function batterycapacity(socket) {
 
-    sensorName = 'batcap';
-    divId = "#batcap";
+    divId = "#batterycapacity";
 
     var i = 0;
     var readings = [];
@@ -15,7 +14,7 @@ function batcap(socket) {
     var plot = $.plot(divId, [samples], {
         yaxis: {
             min: 0,
-            max: .8
+            max: 1.2
         },
         xaxis: {
             show: false
