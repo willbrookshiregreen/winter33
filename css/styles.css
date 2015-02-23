@@ -1,0 +1,20 @@
+  .sensor-block {
+      border-style: solid;
+      border-width: 1px;
+  }
+  .sensor-title {
+      font-size: 20px;
+      color: lightgray;
+      text-align: center;
+  }
+  .sensor-value {
+      font-size: 60px;
+      color: gray;
+      text-align: center;
+  }
+  .buttonchoice {
+      padding: 2px 2px;
+  }
+  .darkness {
+      background-color: black;
+  }
