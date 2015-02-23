@@ -52,7 +52,7 @@
             //console.log("togglesensors");
             $("#allsensors").toggleClass('hidden');
         });
-        var socket = io.connect('http://192.168.1.109:3001');
+        var socket = io.connect('http://10.48.102.xxx:3001'); //change this to match your robot
         batterycapacity(socket);
         leftsignal(socket);
         front_leftsignal(socket);
